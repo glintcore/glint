@@ -1,0 +1,12 @@
+[Unit]
+Description=Glint Service
+After=network.target
+
+[Service]
+Type=simple
+User=glint
+ExecStart=/usr/local/glint/bin/glintserver run
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
